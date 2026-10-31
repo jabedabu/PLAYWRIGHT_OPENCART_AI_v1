@@ -1,0 +1,26 @@
+
+# =========================================================
+# .gitignore file for the project
+# ================
+
+ # Dependencies
+
+ node_modules/
+
+
+  # enviroment & secret
+  .env
+
+  # Palywright test artifacts
+  /test-results/
+  /playwright-report/
+  /bolb-report/
+  /playwright/.cache/
+  /playwright/.auth/
+
+  # Reports
+  
+  /reports/
+   /allure-results/
+   /allure-report/
+   /custom-report/
