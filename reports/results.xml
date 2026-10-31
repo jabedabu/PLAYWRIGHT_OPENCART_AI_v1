@@ -1,34 +1,49 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="0.9792079999999999">
-<testsuite name="api\fakestore-api.spec.ts" timestamp="2026-10-30T21:15:11.187Z" hostname="chromium" tests="1" failures="1" skipped="0" time="0.113" errors="0">
-<testcase name="Authentication › 1. Successful login returns a token" classname="api\fakestore-api.spec.ts" time="0.113">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="9.71151">
+<testsuite name="web\demowebshop-user-registration.spec.ts" timestamp="2026-10-31T21:38:37.514Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.26" errors="0">
+<testcase name="User registration test @master @regression @web" classname="web\demowebshop-user-registration.spec.ts" time="6.26">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\api-fakestore-api-Authenti-f818d-ssful-login-returns-a-token-chromium\error-context.md]]
+<![CDATA[✅ User registration completed successfully!
 ]]>
 </system-out>
-<failure message="Unexpected status for https://fakestoreapi.com/auth/login" type="expect.toBe">
-<![CDATA[  [chromium] › api\fakestore-api.spec.ts:73:7 › Authentication › 1. Successful login returns a token 
+</testcase>
+</testsuite>
+<testsuite name="web\end-to-end-shopping-flow.spec.ts" timestamp="2026-10-31T21:38:37.514Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.806" errors="1">
+<testcase name="End-to-end shopping flow test @master @regression @web" classname="web\end-to-end-shopping-flow.spec.ts" time="6.806">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\web-end-to-end-shopping-fl-94480--test-master-regression-web-chromium\video.webm]]
 
-    Error: Unexpected status for https://fakestoreapi.com/auth/login
-
-    expect(received).toBe(expected) // Object.is equality
-
-    Expected: 201
-    Received: 403
-
-      27 |
-      28 | async function expectStatus(response: APIResponse, status: number) {
-    > 29 |   expect(response.status(), `Unexpected status for ${response.url()}`).toBe(status);
-         |                                                                        ^
-      30 | }
-      31 |
-      32 | function expectAscending(ids: number[]) {
-        at expectStatus (C:\Users\bhuiy\My_All_Project\PLAYWRIGHT_OPENCART_AI\tests\api\fakestore-api.spec.ts:29:72)
-        at C:\Users\bhuiy\My_All_Project\PLAYWRIGHT_OPENCART_AI\tests\api\fakestore-api.spec.ts:77:11
-
-    Error Context: ..\test-results\api-fakestore-api-Authenti-f818d-ssful-login-returns-a-token-chromium\error-context.md
+[[ATTACHMENT|..\test-results\web-end-to-end-shopping-fl-94480--test-master-regression-web-chromium\error-context.md]]
 ]]>
-</failure>
+</system-out>
+<error message="locator.click: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › web\end-to-end-shopping-flow.spec.ts:21:5 › End-to-end shopping flow test @master @regression @web › 1) Open the application and navigate to the register page 
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('#top').getByRole('link', { name: 'My Account' }).first()
+
+
+       at ..\pages\HomePage.ts:34
+
+      32 |      */
+      33 |     async clickMyAccount(): Promise<void> {
+    > 34 |         await this.lnkMyAccount.click();
+         |                                 ^
+      35 |     }
+      36 |
+      37 |     /**
+        at HomePage.clickMyAccount (C:\Users\bhuiy\My_All_Project\PLAYWRIGHT_OPENCART_AI\pages\HomePage.ts:34:33)
+        at C:\Users\bhuiy\My_All_Project\PLAYWRIGHT_OPENCART_AI\tests\web\end-to-end-shopping-flow.spec.ts:42:24
+        at C:\Users\bhuiy\My_All_Project\PLAYWRIGHT_OPENCART_AI\tests\web\end-to-end-shopping-flow.spec.ts:41:5
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\web-end-to-end-shopping-fl-94480--test-master-regression-web-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\web-end-to-end-shopping-fl-94480--test-master-regression-web-chromium\error-context.md
+]]>
+</error>
 </testcase>
 </testsuite>
 </testsuites>
