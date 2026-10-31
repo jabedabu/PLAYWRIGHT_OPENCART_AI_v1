@@ -529,13 +529,16 @@ Follow these steps:
 After completion, report:
 Commit message,Branch,Push result (Successful or Failed or No changes to push)
 
+
 CI / CD (Continuous Integration & Delivery)
+
 Step 11 — Playwright GitHub Actions Workflow
 Manually
 
 Why this matters: A GitHub Actions workflow automatically runs your tests, for example on every push or pull request, and stores the resulting reports without anyone needing to run them manually.
 
 .github\workflows\playwright.yml
+
 #To run manually: go to your repo → Actions → Playwright Tests → Run workflow → choose your parameters → Run.
 
 name: 🎭 Playwright Tests
